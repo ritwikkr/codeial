@@ -1,7 +1,7 @@
 import React from "react";
 import FriendList from "../components/FriendList";
 import Navbar from "../components/Navbar";
-import Post from "../components/Post";
+import CreatePost from "../components/CreatePost";
 import Wrapper from "../styles/HomePageStyle";
 
 function HomePage() {
@@ -10,7 +10,7 @@ function HomePage() {
       <Navbar />
       <main>
         <div className="left">
-          <Post />
+          <CreatePost />
         </div>
         <div className="right">
           <FriendList />

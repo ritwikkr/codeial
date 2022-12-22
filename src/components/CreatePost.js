@@ -1,7 +1,7 @@
 import React from "react";
-import Wrapper from "../styles/PostStyle";
+import Wrapper from "../styles/CreatePostStyle";
 
-function Post() {
+function CreatePost() {
   return (
     <Wrapper>
       <form>
@@ -21,4 +21,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default CreatePost;
