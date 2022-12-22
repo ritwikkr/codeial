@@ -1,11 +1,19 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Post from "../components/Post";
+import Wrapper from "../styles/HomePageStyle";
 
 function HomePage() {
   return (
-    <div>
+    <Wrapper>
       <Navbar />
-    </div>
+      <main>
+        <div className="left">
+          <Post />
+        </div>
+        <div className="right"></div>
+      </main>
+    </Wrapper>
   );
 }
 
