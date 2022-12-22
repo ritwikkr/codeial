@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   background-color: rgb(236, 239, 250);
   main {
-    width: 80%;
+    width: 70%;
     margin: auto;
     display: flex;
     min-height: calc(100vh - 10vh);
