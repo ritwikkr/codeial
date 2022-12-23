@@ -14,7 +14,7 @@ const Wrapper = styled.div`
       margin-left: 10px;
     }
   }
-  body {
+  .body {
     .friend {
       /* border: 2px solid red; */
       height: 8vh;

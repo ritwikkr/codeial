@@ -1,6 +1,5 @@
 import React from "react";
 import FriendList from "../components/FriendList";
-import Navbar from "../components/Navbar";
 import CreatePost from "../components/CreatePost";
 import Wrapper from "../styles/HomePageStyle";
 import Post from "../components/Post";

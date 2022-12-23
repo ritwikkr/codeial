@@ -11,7 +11,7 @@ function Navbar() {
         </div>
       </Link>
       <div className="search-box">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Search" />
       </div>
       <div className="nav">
@@ -24,9 +24,11 @@ function Navbar() {
             <p>John Doe</p>
           </div>
         </Link>
-        <div className="session">
-          <p>LOG OUT</p>
-        </div>
+        <Link to={"/session"}>
+          <div className="session">
+            <p>LOG OUT</p>
+          </div>
+        </Link>
       </div>
     </Wrapper>
   );

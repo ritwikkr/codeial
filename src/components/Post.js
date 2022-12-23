@@ -21,11 +21,11 @@ function Post() {
       <hr />
       <div className="cta">
         <div className="like">
-          <i class="fa-regular fa-heart"></i>
+          <i className="fa-regular fa-heart"></i>
           <p>145</p>
         </div>
         <div className="comments">
-          <i class="fa-regular fa-message"></i>
+          <i className="fa-regular fa-message"></i>
           <p>5</p>
         </div>
       </div>
@@ -46,7 +46,7 @@ function Post() {
           </div>
           <div className="heart-icon">
             {/* Position absolute */}
-            <i class="fa-regular fa-heart"></i>
+            <i className="fa-regular fa-heart"></i>
           </div>
         </div>
         <div className="comment">
@@ -62,7 +62,7 @@ function Post() {
             </p>
           </div>
           <div className="heart-icon">
-            <i class="fa-regular fa-heart"></i>
+            <i className="fa-regular fa-heart"></i>
           </div>
         </div>
       </div>
