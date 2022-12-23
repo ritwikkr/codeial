@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import CreatePost from "../components/CreatePost";
 import Wrapper from "../styles/HomePageStyle";
 import Post from "../components/Post";
+import Chat from "../components/Chat";
 
 function HomePage() {
   return (
@@ -16,6 +17,7 @@ function HomePage() {
         </div>
         <div className="right">
           <FriendList />
+          <Chat />
         </div>
       </main>
     </Wrapper>

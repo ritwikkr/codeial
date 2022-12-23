@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   background-color: rgb(224, 224, 225);
   width: 70%;
   margin: 20px auto;
-  height: 60vh;
+  height: 45vh;
   overflow-y: scroll;
   header {
     height: 50px;
