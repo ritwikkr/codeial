@@ -8,11 +8,9 @@ const Wrapper = styled.div`
     display: flex;
     min-height: calc(100vh - 10vh);
     .left {
-      border: 2px solid black;
       width: 60%;
     }
     .right {
-      border: 2px solid green;
       width: 40%;
     }
   }

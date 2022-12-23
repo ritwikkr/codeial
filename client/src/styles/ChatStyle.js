@@ -71,11 +71,11 @@ const Wrapper = styled.div`
     bottom: 0;
     width: 100%;
     height: 40px;
-    border: 2px solid orangered;
     display: flex;
     input {
       flex: 1;
       border: none;
+      border-top: 1px solid gray;
       outline: none;
       padding-left: 10px;
     }
