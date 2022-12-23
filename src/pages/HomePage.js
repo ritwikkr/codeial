@@ -9,7 +9,6 @@ import Chat from "../components/Chat";
 function HomePage() {
   return (
     <Wrapper>
-      <Navbar />
       <main>
         <div className="left">
           <CreatePost />

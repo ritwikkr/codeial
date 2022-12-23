@@ -3,12 +3,15 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   height: 10vh;
   background-color: rgb(99, 77, 231);
-  padding: 0 50px;
+  padding: 0 250px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .icon {
-    color: white;
+  a {
+    text-decoration: none;
+    .icon {
+      color: white;
+    }
   }
   .search-box {
     width: 500px;
@@ -35,18 +38,21 @@ const Wrapper = styled.div`
     justify-content: space-between;
     color: white;
     width: 250px;
-    .profile {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      p {
-        font-weight: 700;
+    a {
+      color: white;
+      .profile {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        p {
+          font-weight: 700;
+        }
       }
     }
     .session {
