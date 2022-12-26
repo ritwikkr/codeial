@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema(
     email: {
       type: String,
       require: true,
+      unique: true,
     },
     password: {
       type: String,
@@ -21,5 +22,9 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+userSchema.methods.checkPassword = async function (password) {
+  return this.password === password;
+};
 
 export default mongoose.model("User", userSchema);

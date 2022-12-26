@@ -1,47 +1,90 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { userAction } from "../store/slices/userSlice";
 import Wrapper from "../styles/SessionPageStyle";
 
 function SessionPage() {
+  // Component State
   const [signIn, setSignIn] = useState(true);
-  function changeSessionTypeToSignIn() {
-    setSignIn(true);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const dispatch = useDispatch();
+
+  // Component Funtions
+  function formSubmitHandler(e) {
+    e.preventDefault();
+    const { name, email, password, confirmPassword } = user;
+    if (signIn) {
+      dispatch(
+        userAction({ sessionType: "logSession", user: { email, password } })
+      );
+    } else if (password === confirmPassword) {
+      dispatch(
+        userAction({
+          sessionType: "createSession",
+          user: { name, email, password },
+        })
+      );
+    }
   }
-  function changeSessionTypeToSignUp() {
-    setSignIn(false);
-  }
+
+  // Component Render
   return (
     <Wrapper>
       <section>
         <div className="session-heading">
           <p
-            onClick={changeSessionTypeToSignIn}
+            onClick={() => setSignIn(true)}
             className={signIn ? "active" : null}
           >
             Sign In
           </p>
           <p
-            onClick={changeSessionTypeToSignUp}
+            onClick={() => setSignIn(false)}
             className={signIn ? null : "active"}
           >
             Sign up
           </p>
         </div>
         <div className="session-body">
-          <form>
+          <form onSubmit={formSubmitHandler}>
             {!signIn && (
               <div className="form-content">
-                <input type="name" placeholder="Name" />
+                <input
+                  type="name"
+                  placeholder="Name"
+                  onChange={(e) => setUser({ ...user, name: e.target.value })}
+                />
               </div>
             )}
             <div className="form-content">
-              <input type="email" placeholder="Email" />
+              <input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+              />
             </div>
             <div className="form-content">
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+              />
             </div>
             {!signIn && (
               <div className="form-content">
-                <input type="password" placeholder="Confirm password" />
+                <input
+                  type="password"
+                  placeholder="Confirm password"
+                  onChange={(e) =>
+                    setUser({ ...user, confirmPassword: e.target.value })
+                  }
+                />
               </div>
             )}
             <div className="form-content divider">

@@ -1,8 +1,17 @@
 import React from "react";
 import Wrapper from "../styles/NavbarStyle";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const user = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
+  function logoutUser() {
+    localStorage.removeItem("user");
+    navigate("/");
+  }
   return (
     <Wrapper>
       <Link to={"/"}>
@@ -24,11 +33,15 @@ function Navbar() {
             <p>John Doe</p>
           </div>
         </Link>
-        <Link to={"/session"}>
-          <div className="session">
-            <p>LOG OUT</p>
-          </div>
-        </Link>
+        <div className="session">
+          {user.data ? (
+            <p onClick={() => logoutUser()}>LOG OUT</p>
+          ) : (
+            <Link to={"/session"}>
+              <p>LOG IN</p>
+            </Link>
+          )}
+        </div>
       </div>
     </Wrapper>
   );
